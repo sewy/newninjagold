@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Ninja GOld!!!</h1>
+<p>Gold: @ViewBag.gold</p>
+<form action="/process_money" method="post">
+  <p>Farm</p>
+  <p>(Earns 10-20 golds)</p>
+  <input type="hidden" name="building" value="farm" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<hr>
+<form action="/process_money" method="post">
+  <p>Cave</p>
+  <p>(Earns 5-10 golds)</p>
+  <input type="hidden" name="building" value="cave" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<hr>
+<form action="/process_money" method="post">
+  <p>House</p>
+  <p>(Earns 2-5 golds)</p>
+  <input type="hidden" name="building" value="house" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<hr>
+<form action="/process_money" method="post">
+  <p>Farm</p>
+  <p>(Earns/Loses 0-50 golds)</p>
+  <input type="hidden" name="building" value="casino" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<hr>
+<div>
+    <p>Activities:</p>
+    <p>@ViewBag.activities</p>
+</div>
